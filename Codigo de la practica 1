@@ -1,16 +1,22 @@
+/*
+ * Programa 0x250 - Getting Your Hands Dirty
+ */
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
 
-// 0x250 - Getting Your Hands Dirty
-void hello_world() {
+int main() {
     for(int i = 0; i < 10; i++) {
         printf("Hello, world!\n");
     }
+    return 0;
 }
 
-// 0x261 - Strings
-void string_example() {
+/*
+ * Programa 0x261 - Strings
+ */
+#include <stdio.h>
+#include <string.h>
+
+int main() {
     char str1[] = "Hello";
     char str2[] = "World";
     char result[20];
@@ -20,10 +26,15 @@ void string_example() {
     strcat(result, str2);
     
     printf("Concatenated string: %s\n", result);
+    return 0;
 }
 
-// 0x262 - Signed, Unsigned, Long, Short
-void number_types() {
+/*
+ * Programa 0x262 - Signed, Unsigned, Long, Short
+ */
+#include <stdio.h>
+
+int main() {
     short s = 32767;
     unsigned short us = 65535;
     long l = 2147483647;
@@ -31,58 +42,71 @@ void number_types() {
     
     printf("Short: %d, Unsigned Short: %u\n", s, us);
     printf("Long: %ld, Unsigned Long: %lu\n", l, ul);
+    return 0;
 }
 
-// 0x263 - Pointers
-void pointer_example() {
+/*
+ * Programa 0x263 - Pointers
+ */
+#include <stdio.h>
+
+int main() {
     int num = 42;
     int *ptr = &num;
     
     printf("Value: %d, Address: %p\n", *ptr, (void*)ptr);
+    return 0;
 }
 
-// 0x264 - Format Strings
-void format_string() {
+/*
+ * Programa 0x264 - Format Strings
+ */
+#include <stdio.h>
+
+int main() {
     char name[20] = "Alice";
     int age = 25;
     
     printf("Name: %s, Age: %d\n", name, age);
+    return 0;
 }
 
-// 0x265 - Typecasting
-void typecasting_example() {
+/*
+ * Programa 0x265 - Typecasting
+ */
+#include <stdio.h>
+
+int main() {
     int a = 10, b = 3;
     float result = (float)a / b;
     printf("10 / 3 = %.2f\n", result);
+    return 0;
 }
 
-// 0x266 - Command-Line Arguments
-void command_line_args(int argc, char *argv[]) {
+/*
+ * Programa 0x266 - Command-Line Arguments
+ */
+#include <stdio.h>
+
+int main(int argc, char *argv[]) {
     printf("Number of arguments: %d\n", argc);
     for(int i = 0; i < argc; i++) {
         printf("Argument %d: %s\n", i, argv[i]);
     }
+    return 0;
 }
 
-// 0x267 - Variable Scoping
-void scope_example() {
+/*
+ * Programa 0x267 - Variable Scoping
+ */
+#include <stdio.h>
+
+int main() {
     int x = 10; // Global scope
     {
         int x = 20; // Local scope
         printf("Inner scope x = %d\n", x);
     }
     printf("Outer scope x = %d\n", x);
-}
-
-// Main function to run examples
-int main(int argc, char *argv[]) {
-    hello_world();
-    string_example();
-    number_types();
-    pointer_example();
-    format_string();
-    typecasting_example();
-    command_line_args(argc, argv);
-    scope_example();
     return 0;
 }
